@@ -1,6 +1,7 @@
 from pickle import TRUE
 from flask import Flask, request
 from flask import jsonify
+from flask_cors import CORS
 
 from models import corpusModel, searchModel
 from dbconnection import db_query
@@ -15,6 +16,7 @@ corpus_1, model_1, corpus_embeddings_1 = corpusModel.corpus_fun_public()
 
 
 app = Flask(__name__)
+CORS(app)
 
 # Version
 @app.route("/") 
