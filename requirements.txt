@@ -1,0 +1,17 @@
+numpy
+pandas
+python-dateutil
+pickleshare
+sentence-transformers
+pickleshare
+torch
+Flask
+jsonify
+Flask-Compress
+flask-cors
+pyodbc
+
+
+
+
+
