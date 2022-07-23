@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - uses: actions/checkout@v2
@@ -26,6 +26,9 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
+          
+      - name: Install drivers
+        run: sh driv_installation2.sh
       
       - name: Install dependencies
         run: pip install -r requirements.txt
